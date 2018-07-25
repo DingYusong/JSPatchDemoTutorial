@@ -22,10 +22,16 @@
     // Override point for customization after application launch.
 //    [JPEngine startEngine];
     // exec js file from network
-    [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://localhost:3601/demo.js"]] queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-        NSString *script = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        [JPEngine evaluateScript:script];
-    }];
+//    [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://localhost:3601/demo.js"]] queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+//        NSString *script = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+//        [JPEngine evaluateScript:script];
+//    }];
+
+    
+    // exec local js file
+    NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"demo" ofType:@"js"];
+    NSString *script = [NSString stringWithContentsOfFile:sourcePath encoding:NSUTF8StringEncoding error:nil];
+    [JPEngine evaluateScript:script];
 
 
     return YES;
@@ -48,10 +54,10 @@
     // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
     
     // exec js file from network
-    [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://localhost:3601/demo.js"]] queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-        NSString *script = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        [JPEngine evaluateScript:script];
-    }];
+//    [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://localhost:3601/demo.js"]] queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+//        NSString *script = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+//        [JPEngine evaluateScript:script];
+//    }];
 
 }
 

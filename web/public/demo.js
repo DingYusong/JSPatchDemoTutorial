@@ -1,5 +1,14 @@
-var alertView = require('UIAlertView').alloc().init();
-alertView.setTitle('Alert');
-alertView.setMessage('AlertView from js');
-alertView.addButtonWithTitle('OK');
-alertView.show();
+defineClass(
+    'People',
+    {
+        eat: function () {
+            self.ORIGeat();
+            console.log('eat two times');
+        },
+    },
+    {
+        handsNumber: function () {
+            return 2;
+        }
+    }
+);

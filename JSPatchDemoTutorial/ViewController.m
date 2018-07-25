@@ -7,8 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "People.h"
 
 @interface ViewController ()
+@property (nonatomic ,strong) People *lilei;
 
 @end
 
@@ -16,15 +18,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
     
-    [self hello];
+    _lilei = [People new];
+    
+    NSLog(@"People has %ld hand",(long)[People handsNumber]);
+    
+    [_lilei eat];
+    
+    // Do any additional setup after loading the view, typically from a nib.
 }
 
-
-- (void)hello{
-    NSLog(@"hello Mr Ding");
-}
 
 
 - (void)didReceiveMemoryWarning {

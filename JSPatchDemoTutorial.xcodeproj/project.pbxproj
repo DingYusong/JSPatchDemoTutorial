@@ -14,6 +14,8 @@
 		F721285D210819E800D3D926 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F721285C210819E800D3D926 /* main.m */; };
 		F72128652108208F00D3D926 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F72128632108208F00D3D926 /* LaunchScreen.storyboard */; };
 		F72128662108208F00D3D926 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F72128642108208F00D3D926 /* Main.storyboard */; };
+		F721286821087A1800D3D926 /* demo.js in Resources */ = {isa = PBXBuildFile; fileRef = F721286721087A1800D3D926 /* demo.js */; };
+		F721286B21087CEE00D3D926 /* People.m in Sources */ = {isa = PBXBuildFile; fileRef = F721286A21087CEE00D3D926 /* People.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,9 @@
 		F721285C210819E800D3D926 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F72128632108208F00D3D926 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F72128642108208F00D3D926 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		F721286721087A1800D3D926 /* demo.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = demo.js; path = web/public/demo.js; sourceTree = "<group>"; };
+		F721286921087CEE00D3D926 /* People.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = People.h; sourceTree = "<group>"; };
+		F721286A21087CEE00D3D926 /* People.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = People.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +69,7 @@
 		F7212841210819E600D3D926 = {
 			isa = PBXGroup;
 			children = (
+				F721286721087A1800D3D926 /* demo.js */,
 				F721284C210819E700D3D926 /* JSPatchDemoTutorial */,
 				F721284B210819E700D3D926 /* Products */,
 				89FE9B85EB6ACC62703E96DC /* Pods */,
@@ -86,6 +92,8 @@
 				F721284E210819E700D3D926 /* AppDelegate.m */,
 				F7212850210819E700D3D926 /* ViewController.h */,
 				F7212851210819E700D3D926 /* ViewController.m */,
+				F721286921087CEE00D3D926 /* People.h */,
+				F721286A21087CEE00D3D926 /* People.m */,
 				F72128632108208F00D3D926 /* LaunchScreen.storyboard */,
 				F72128642108208F00D3D926 /* Main.storyboard */,
 				F7212856210819E800D3D926 /* Assets.xcassets */,
@@ -157,6 +165,7 @@
 				F72128662108208F00D3D926 /* Main.storyboard in Resources */,
 				F7212857210819E800D3D926 /* Assets.xcassets in Resources */,
 				F72128652108208F00D3D926 /* LaunchScreen.storyboard in Resources */,
+				F721286821087A1800D3D926 /* demo.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F721286B21087CEE00D3D926 /* People.m in Sources */,
 				F7212852210819E700D3D926 /* ViewController.m in Sources */,
 				F721285D210819E800D3D926 /* main.m in Sources */,
 				F721284F210819E700D3D926 /* AppDelegate.m in Sources */,
