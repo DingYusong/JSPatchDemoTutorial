@@ -20,13 +20,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [JPEngine startEngine];
-    
+//    [JPEngine startEngine];
     // exec js file from network
     [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://localhost:3601/demo.js"]] queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         NSString *script = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
         [JPEngine evaluateScript:script];
     }];
+
 
     return YES;
 }
@@ -46,6 +46,13 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+    
+    // exec js file from network
+    [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://localhost:3601/demo.js"]] queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        NSString *script = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        [JPEngine evaluateScript:script];
+    }];
+
 }
 
 
