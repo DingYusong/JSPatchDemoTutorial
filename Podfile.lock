@@ -1,0 +1,18 @@
+PODS:
+  - JSPatch (1.1.3):
+    - JSPatch/Core (= 1.1.3)
+  - JSPatch/Core (1.1.3)
+
+DEPENDENCIES:
+  - JSPatch
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - JSPatch
+
+SPEC CHECKSUMS:
+  JSPatch: 02cfed591cb907bbfe80a346666e5a35fc2d349d
+
+PODFILE CHECKSUM: bedb67bc428917f52079e00fd94581cbc6b8062b
+
+COCOAPODS: 1.5.3
