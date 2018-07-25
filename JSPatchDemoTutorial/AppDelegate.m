@@ -22,7 +22,12 @@
     // Override point for customization after application launch.
     [JPEngine startEngine];
     
-        
+    // exec js file from network
+    [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://localhost:3601/demo.js"]] queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        NSString *script = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        [JPEngine evaluateScript:script];
+    }];
+
     return YES;
 }
 
